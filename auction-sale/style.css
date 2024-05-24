@@ -1,0 +1,88 @@
+/* Conteneur principal */
+.products {
+    display: flex; /* Utilise la flexbox pour une mise en page fluide */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 20px; /* Espacement intérieur du conteneur */
+    justify-content: center; /* Centre les éléments horizontalement */
+    background-color: #f9f9f9; /* Couleur de fond du conteneur */
+    border-radius: 10px; /* Coins arrondis pour le conteneur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un léger effet de profondeur */
+}
+
+/* Chaque produit individuel */
+.product {
+    flex: 1 1 200px; /* Les éléments prennent une taille minimale de 200px et grandissent pour remplir l'espace */
+    max-width: 300px; /* Limite la taille maximale à 300px */
+    padding: 20px; /* Espacement intérieur pour chaque produit */
+    background-color: #fff; /* Fond blanc pour les produits */
+    border: 1px solid #ddd; /* Bordure légère autour de chaque produit */
+    border-radius: 10px; /* Coins arrondis pour les produits */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation pour les transformations et les ombres */
+}
+
+/* Effet de survol pour chaque produit */
+.product:hover {
+    transform: translateY(-5px); /* Légère élévation lors du survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée lors du survol */
+}
+
+/* Contenu des produits */
+.product p {
+    margin: 0 0 10px; /* Espacement en bas des paragraphes à l'intérieur des produits */
+    font-size: 16px; /* Taille de la police des paragraphes */
+    color: #333; /* Couleur du texte */
+}
+
+.product h2 {
+    margin: 0 0 15px; /* Espacement en bas des titres à l'intérieur des produits */
+    font-size: 20px; /* Taille de la police des titres */
+    color: #111; /* Couleur du texte des titres */
+}
+
+/* Ajustements pour les écrans de petite taille */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 100%; /* Les éléments prennent toute la largeur disponible */
+    }
+}
+
+
+/* Style du bouton */
+.button {
+    display: inline-block; /* Assure que le bouton soit au format inline-block */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras pour le texte */
+    color: #fff; /* Couleur du texte */
+    background-color: #007BFF; /* Couleur de fond */
+    border: none; /* Suppression de la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    cursor: pointer; /* Curseur de pointeur pour indiquer qu'il est cliquable */
+    text-decoration: none; /* Suppression de la décoration de texte (utile pour les liens) */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition pour les effets */
+}
+
+/* Effet de survol */
+.button:hover {
+    background-color: #0056b3; /* Changement de couleur de fond lors du survol */
+    transform: translateY(-2px); /* Légère élévation */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+}
+
+/* Effet d'activation (clic) */
+.button:active {
+    background-color: #004085; /* Couleur de fond lors du clic */
+    transform: translateY(0); /* Retour à la position initiale */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre initiale */
+}
+
+/* Bouton désactivé */
+.button:disabled {
+    background-color: #6c757d; /* Couleur de fond pour l'état désactivé */
+    cursor: not-allowed; /* Curseur non permis */
+    opacity: 0.65; /* Opacité réduite */
+    box-shadow: none; /* Suppression de l'ombre */
+}
